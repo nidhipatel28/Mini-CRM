@@ -61,7 +61,7 @@ class EmployeesController extends Controller
             $Employees = new Employees;
             $msg = "Employees added successfully.";
         }
-        $Employees->id = $request->id;
+        // $Employees->id = $request->id;
         $Employees->first_name = $request->first_name;
         $Employees->last_name = $request->last_name;
         $Employees->companies_id = $request->companies_id;

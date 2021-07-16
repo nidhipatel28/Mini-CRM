@@ -59,7 +59,7 @@ class CompaniesController extends Controller
             $companies = new Companies;
             $msg = "Companies added successfully.";
         }
-        $companies->id = $request->id;
+        // $companies->id = $request->id;
         $companies->name = $request->name;
         $companies->email = $request->email;
         $companies->website = $request->website;
