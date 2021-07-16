@@ -135,14 +135,14 @@ class CompaniesController extends Controller
             "name.required" => "Please enter company name",
             "name.max" => "The name entered exceeds the maximum length ",
             "email.email" => "Please enter valid email address",
-            "logo.dimensions" => "Logo must be 100*100",
+            "logo.dimensions" => "Logo must be 1000*1000",
             "website.regex" => "Please enter valid website",
         ];
 
         $validateAtt = $request->validate([
             'name' => 'required|max:191',
             'email' => 'nullable|email|regex:^\w+@[a-zA-Z_]+?\.[a-zA-Z.]{2,20}$^',
-            'logo' => 'nullable|image|mimes:jpeg,jpg,png,gif|dimensions:max_width=100,max_height=100',
+            'logo' => 'nullable|image|mimes:jpeg,jpg,png,gif|dimensions:max_width=1000,max_height=1000',
             'website' => ['nullable', 'regex:/^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/'],
         ],$messages);
 
