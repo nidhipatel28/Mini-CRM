@@ -27,7 +27,7 @@ class EmployeesController extends Controller
             'action' => 'Action'
         ];
 
-        return view('Employees/index')->with(
+        return view('employees/index')->with(
         [
             'viewEmployees' => $viewEmployees,
             'columns' => $columns,
@@ -81,7 +81,7 @@ class EmployeesController extends Controller
     public function show($id)
     {
         $viewemploye = Employees::find($id);
-        return view('Employees/view')->with(['viewemploye' => $viewemploye]);
+        return view('employees/view')->with(['viewemploye' => $viewemploye]);
     }
 
     /**
@@ -94,7 +94,7 @@ class EmployeesController extends Controller
     {
         $companyList = Companies::get();
         $viewemploye = Employees::find($id);
-        return view('Employees/addEdit')->with(['viewEmployees' => $viewemploye,'companyList' => $companyList]);
+        return view('employees/addEdit')->with(['viewEmployees' => $viewemploye,'companyList' => $companyList]);
     }
 
     /**
